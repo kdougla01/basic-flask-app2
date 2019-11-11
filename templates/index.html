@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- to be filled by the Python script -->
+<h1>{{ the_title }}</h1>
+<h3>{{ subtitle }}</h3>
+
+<!-- note how items from the "static" folder are linked -->
+<img alt="Photo: Tiger Woods" src="{{ url_for('static', filename='images/tigerwoods.jpg') }}">
+
+<img alt="Photo: Tigger" src="{{ url_for('static', filename='images/tigger.jpg') }}">
+
+<p>This is the index page for my example Flask app.</p>
+
+
+<h1>Example heading <span class="badge badge-secondary">New</span></h1>
+<h2>Example heading <span class="badge badge-secondary">New</span></h2>
+<h3>Example heading <span class="badge badge-secondary">New</span></h3>
+<h4>Example heading <span class="badge badge-secondary">New</span></h4>
+<h5>Example heading <span class="badge badge-secondary">New</span></h5>
+<h6>Example heading <span class="badge badge-secondary">New</span></h6>
+
+
+<ul>
+  <!-- note how items from routes in the the Python script are linked -->
+  <li><a href="{{ url_for('myth') }}">In myth and legend</a></li>
+  <li><a href="{{ url_for('symbol') }}">As a symbol</a></li>
+</ul>
+
+<p>THIS IS A LOT OF TEXT!
+</p>
+
+<p>(Text from <a href="https://en.wikipedia.org/wiki/Tiger" target="_blank">Wikipedia</a>)</p>
+
+
+{% endblock %}
